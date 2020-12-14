@@ -1,0 +1,32 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}This is an example page{% endblock %}
+
+{% block content %}
+<div class="container">
+<h1>List of all uploaded files</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+        <th scope="col">Link</th>
+    </tr>
+  </thead>
+<tbody>
+{% for file in files %}
+    <tr>
+    <td> {{ loop.index }}</td>
+    <td> {{ file }} </td>
+    <td> <a class="btn btn-primary" href="{{ url_for('renameCsv.edit_csv', filename=file) }}" role="button">View</a></td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+
+<a href="./">Upload new file</a>
+</div>
+
+{% endblock %}

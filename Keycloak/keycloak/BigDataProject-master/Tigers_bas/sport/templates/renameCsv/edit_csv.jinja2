@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}This is an example page{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Edit File</h1>
+    <h3>Filename: {{ filename }}</h3>
+    <br>
+    <h4>Sheet names</h4>
+    <ul>
+    {% for sheet in sheets %}
+        <li>{{ sheet }} </li>
+    {% endfor %}
+    </ul>
+
+    <button type="button" class="btn btn-primary">Save</button>
+    <a class="btn btn-danger" href="{{ url_for('renameCsv.get_all_uploaded_csvs')}}" role="button">Cancel</a>
+</div>
+{% endblock %}

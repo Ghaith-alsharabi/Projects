@@ -1,0 +1,19 @@
+{% extends "layout_inlog.html" %}
+{% block content %}
+     <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <h1>Welcome to Forward Sport</h1>
+                    <div class="textbox">
+                        {{ form.username.label }}
+                        {{ form.username }}
+                    </div>
+                    <div class="textbox">
+                        {{ form.password.label }}
+                        {{ form.password }}
+                    </div>
+                <div >
+                    {{ form.submit(class="button") }} 
+                </div>
+     </form>
+{% endblock %}
+

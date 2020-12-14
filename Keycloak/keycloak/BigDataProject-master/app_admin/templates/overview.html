@@ -1,0 +1,80 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+Overview
+{% endblock %}
+{% block styles %}
+{{super()}}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+{% endblock %}
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container-fluid">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Forward Sports</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+   <ul class="nav nav-sidebar">
+   <li><a href="{{ url_for('roles') }}">Roles <span class="sr-only"></span></a></li>
+   <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+</div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Overview of all roles and active roles</h1>
+    <div class="container-fluid">
+       <div class="row2">
+          <div class="col md-12">
+             <div class="jumbotron p-3">
+                    <div class="chart" id="bargraph">
+                        <script>
+                            var graphs = {{plot | safe}};
+                            Plotly.plot('bargraph',graphs,{});
+                        </script>
+                    </div>
+                    <div class="chart" id="bargraph">
+                        <script>
+                            var graphs = {{plot2 | safe}};
+                            Plotly.plot('bargraph',graphs,{});
+                        </script>
+                    </div>
+             </div>
+             <div>
+               <h5>
+                  <table class="table table-hover table-dark">
+                     <tr>
+                        <th>Count Roles</th>
+                        <th>Count Users</th>
+                        <th>Count Admin</th>
+                     </tr>
+               
+                  <tr>
+                     <td>{{countR}}</td>
+                     <td>{{countU}}</td>                  
+                     <td>1</td>
+                  </tr>
+               </h5> 
+               </table>
+             </div>
+          </div>
+          </div>
+       </div>
+    </div>
+ </div>
+<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+{% endblock %}

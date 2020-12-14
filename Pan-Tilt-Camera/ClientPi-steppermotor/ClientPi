@@ -1,0 +1,63 @@
+import paho.mqtt.client as mqtt
+import time
+from adafruit_motorkit import MotorKit
+from adafruit_motor import stepper
+
+#MQTT_SERVER = "m24.cloudmqtt.com"
+MQTT_SERVER ="ghaithpi"
+#MQTT_PATH = "test_channel"
+PORT =8883
+kit = MotorKit(address=0x6f)
+myvar  =0
+
+#qwer = 0
+
+#user = "kcxqqglz"
+#password = "sDPJ7cBDyool"
+# The callback for when the client receives a CONNACK response from the server.
+def on_connect(client, userdata, flags, rc):
+    print("Connected with result code "+str(rc))
+    client.subscribe("CoreElectronics/test")
+#    client.subscribe("CoreElectronics/topic")
+
+    # Subscribing in on_connect() means that if we lose the connection and
+    # reconnect then subscriptions will be renewed.
+    #client.subscribe(MQTT_PATH)
+
+# The callback for when a PUBLISH message is received from the server.
+
+#qwer = 0
+def on_message(client, userdata, msg):
+
+    msgstr = msg.payload
+    msgList = msgstr.split()
+
+    x =int(msgList[0])
+    print(x)
+    y = int(msgList[1])
+    print(y)
+    xw = int(msgList[2])
+    if x > 270:
+        for i in range(100):
+             kit.stepper1.onestep(direction=stepper.FORWARD, style=stepper.MICROST$
+    if x < 220:
+        for i in range(100):
+             kit.stepper1.onestep(direction=stepper.BACKWARD, style=stepper.MICROS$
+
+
+
+client = mqtt.Client()
+client.username_pw_set(username="ghaith",password="ghaith099")
+client.tls_set("/etc/mosquitto/certs/ca.crt")
+client.on_connect = on_connect
+client.on_message = on_message
+client.connect(MQTT_SERVER, PORT)
+client.loop_forever()
+#client.loop(timeout=10.0)
+
+# Blocking call that processes network traffic, dispatches callbacks and
+# handles reconnecting.
+# Other loop*() functions are available that give a threaded interface and a
+# manual interface.
+
+

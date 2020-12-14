@@ -1,0 +1,11 @@
+from adafruit_motorkit import MotorKit
+from adafruit_motor import stepper
+
+kit = MotorKit(address=0x6f)
+while True:
+    rang = input("how much?")
+    inte = int(rang)
+    for i in range(inte):
+        kit.stepper1.onestep(direction=stepper.BACKWARD, style=stepper.MICROSTEP)
+    for i in range(inte):
+        kit.stepper1.onestep(direction=stepper.FORWARD, style=stepper.MICROSTEP)

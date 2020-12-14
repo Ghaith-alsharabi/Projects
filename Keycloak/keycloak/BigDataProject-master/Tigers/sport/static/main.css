@@ -1,0 +1,50 @@
+body {
+    background-image: url(football-forwards.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90%;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+html {
+    height: 90%;
+}
+
+.error {
+    text-align: center;
+}
+
+.error > h1 {
+    font-weight: 800;
+}
+
+.homepagina {
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 14%;
+    right: 14%;
+    word-wrap: break-word;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px; }
+p {
+    font-size: 22px; }
+.navigatiebar {
+    background-color: #333;
+    overflow: hidden; }
+.navigatiebar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px; }
+.navigatiebar a:hover {
+    background-color: midnightblue;
+    transition-duration: 0.8s;
+}

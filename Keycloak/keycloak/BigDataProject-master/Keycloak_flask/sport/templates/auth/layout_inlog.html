@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='inlogpagina.css') }}">
+		<meta charset="UTF-8">
+        {% if title %}
+            <title>{{ title }}</title>
+        {% endif %}
+        <!--
+            Old login page /account
+            New login page /login
+        -->
+    </head>
+    <body>
+   <h1>APP 1</h1>
+    <div class="homepagina">
+        {% block content %}
+        
+        
+        {% endblock %}
+    </div>
+    </body>
+    <footer>
+        The Tigers
+    </footer>
+</html>

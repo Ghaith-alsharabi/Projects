@@ -1,0 +1,19 @@
+.question {
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.tooltip {
+    max-width: 200px;
+}
+
+.rc-slider-mark-text {
+    font-size: 20px;
+}
+
+/* .rc-slider-rail {
+    height: 25px;
+} */

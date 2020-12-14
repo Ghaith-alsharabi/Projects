@@ -1,0 +1,12 @@
+{% extends "basketballApp/layout.jinja2" %}
+
+{% block content %}
+<div class="card">
+  <img src="{{ url_for('static', filename='img/orangeLions.jpeg') }}" class="logo"/>
+  <h1 class="site-title">{{ title }}</h1>
+  <a href="/basketballDashApp/" class="dash-link">
+    <span>Open Basketball Dashboard</span>
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+{% endblock %}
