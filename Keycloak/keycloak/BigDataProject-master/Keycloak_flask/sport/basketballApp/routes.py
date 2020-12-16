@@ -51,8 +51,14 @@ def redirec():
 
 
 
-@bp.route("/logout", methods=['GET', 'POST'])
-def log_out():
+
+@bp.route('/basketballDashApp/logout', methods=['GET', 'POST'])
+def logout():
+    #response = redirect(url_for('http://localhost:5000'))
+    #response.set_cookie(oidc.id_token_cookie_name, expires=0)
+    #return response
     oidc.logout()
-    #return redirect(oidc.client_secrets.get('issuer')+'/protocol/openid-connect/logout?redirect_uri='+request.host_url)
-    return redirect("http://localhost:8080/auth/realms/demo/protocol/openid-connect/logout?redirect_uri=http://localhost:5000/",code=302)
+    return redirect(oidc.client_secrets.get('issuer')+'/protocol/openid-connect/logout?redirect_uri='+request.host_url)
+
+
+   

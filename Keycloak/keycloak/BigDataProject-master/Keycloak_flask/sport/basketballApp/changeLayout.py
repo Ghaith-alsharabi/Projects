@@ -48,6 +48,11 @@ def change_layout(basketball_app,players,role):
                             comparison.get_comparison_layout(basketball_app,players),
                         ],
                     ),
+                    dcc.LogoutButton(
+                        label="Logout",
+                        logout_url ='/basketballDashApp/logout' 
+                    )
+
                 ]
             )
         ])
@@ -80,6 +85,10 @@ def change_layout(basketball_app,players,role):
                             comparison.get_comparison_layout(basketball_app,players),
                         ],
                     ),
+                    dcc.LogoutButton(
+                        label="Logout",
+                        logout_url ='/basketballDashApp/logout' 
+                    )
                 ]
             )
         ])

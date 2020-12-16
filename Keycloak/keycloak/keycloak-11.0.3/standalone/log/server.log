@@ -408,3 +408,29 @@
 2020-12-11 13:44:18,560 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
 2020-12-11 13:49:30,864 WARN  [org.keycloak.events] (default task-4) type=UPDATE_PASSWORD_ERROR, realmId=demo, clientId=client1, userId=f35786db-39f4-4774-96e4-b8121bd451cf, ipAddress=127.0.0.1, error=password_confirm_error, auth_method=openid-connect, custom_required_action=UPDATE_PASSWORD, response_type=code, redirect_uri=http://127.0.0.1:5000/oidc_callback, remember_me=false, code_id=a8cb8f87-885f-4eb9-bc77-24a3c7c192cf, response_mode=query, username=testadmin, authSessionParentId=a8cb8f87-885f-4eb9-bc77-24a3c7c192cf, authSessionTabId=WcL6dUQYeVs
 2020-12-11 13:50:28,658 WARN  [org.keycloak.events] (default task-4) type=LOGIN_ERROR, realmId=demo, clientId=client1, userId=null, ipAddress=127.0.0.1, error=user_not_found, auth_method=openid-connect, auth_type=code, redirect_uri=http://localhost:5000/oidc_callback, code_id=b6cbc937-a2f3-4f78-b317-80199ec2b69e, username=useradmin, authSessionParentId=b6cbc937-a2f3-4f78-b317-80199ec2b69e, authSessionTabId=TyOc2pra-xw
+2020-12-14 04:54:25,283 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-8) WFLYDS0013: Started FileSystemDeploymentService for directory D:\Ghaith_projects\Projects\Keycloak\keycloak\keycloak-11.0.3\standalone\deployments
+2020-12-14 04:54:25,291 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "keycloak-server.war" (runtime-name: "keycloak-server.war")
+2020-12-14 04:54:25,640 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2020-12-14 04:54:26,324 INFO  [org.infinispan.PERSISTENCE] (MSC service thread 1-4) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2020-12-14 04:54:26,324 INFO  [org.infinispan.PERSISTENCE] (MSC service thread 1-5) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2020-12-14 04:54:26,340 INFO  [org.infinispan.CONTAINER] (MSC service thread 1-4) ISPN000128: Infinispan version: Infinispan 'Turia' 10.1.8.Final
+2020-12-14 04:54:26,507 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 56) WFLYCLINF0002: Started client-mappings cache from ejb container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 58) WFLYCLINF0002: Started offlineClientSessions cache from keycloak container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 59) WFLYCLINF0002: Started clientSessions cache from keycloak container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 67) WFLYCLINF0002: Started actionTokens cache from keycloak container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started sessions cache from keycloak container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 57) WFLYCLINF0002: Started loginFailures cache from keycloak container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 64) WFLYCLINF0002: Started offlineSessions cache from keycloak container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0002: Started authenticationSessions cache from keycloak container
+2020-12-14 04:54:26,523 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started work cache from keycloak container
+2020-12-14 04:54:26,555 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 56) WFLYCLINF0002: Started users cache from keycloak container
+2020-12-14 04:54:26,555 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 61) WFLYCLINF0002: Started keys cache from keycloak container
+2020-12-14 04:54:26,555 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 62) WFLYCLINF0002: Started realms cache from keycloak container
+2020-12-14 04:54:26,555 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 65) WFLYCLINF0002: Started authorization cache from keycloak container
+2020-12-14 04:54:26,902 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0273: Excluded subsystem webservices via jboss-deployment-structure.xml does not exist.
+2020-12-14 04:54:27,421 INFO  [org.keycloak.services] (ServerService Thread Pool -- 68) KC-SERVICES0001: Loading config from standalone.xml or domain.xml
+2020-12-14 04:54:27,517 INFO  [org.keycloak.url.DefaultHostnameProviderFactory] (ServerService Thread Pool -- 68) Frontend: <request>, Admin: <frontend>, Backend: <request>
+2020-12-14 04:54:27,997 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 68) WFLYCLINF0002: Started realmRevisions cache from keycloak container
+2020-12-14 04:54:28,005 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 68) WFLYCLINF0002: Started userRevisions cache from keycloak container
+2020-12-14 04:54:28,005 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 68) WFLYCLINF0002: Started authorizationRevisions cache from keycloak container
+2020-12-14 04:54:28,005 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (ServerService Thread Pool -- 68) Node name: desktop-v5q38jp, Site name: null

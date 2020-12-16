@@ -102,7 +102,7 @@ def create_app(config_class=Config):
         'SECRET_KEY': 'SomethingNotEntirelySecret',
         'TESTING': True,
         'DEBUG': True,
-        'OIDC_CLIENT_SECRETS': 'C:/client_secrets.json',
+        'OIDC_CLIENT_SECRETS': 'D:/Ghaith_projects/Projects/Keycloak/keycloak/client_secrets.json',
         'OIDC_ID_TOKEN_COOKIE_SECURE': False,
         'OIDC_REQUIRE_VERIFIED_EMAIL': False,
         'OIDC_VALID_ISSUERS': ['http://localhost:8080/auth/realms/demo'],
