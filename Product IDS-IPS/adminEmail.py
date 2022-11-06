@@ -1,1 +1,1 @@
-adminEmail = "kenannakola@hotmail.com"
+adminEmail = ""
